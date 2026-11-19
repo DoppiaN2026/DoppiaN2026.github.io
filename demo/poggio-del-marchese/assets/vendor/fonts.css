@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./fonts/CormorantGaramond-italic-500.woff2?v=08d7e5e42a802a4a) format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./fonts/CormorantGaramond-500.woff2?v=08d7e5e42a802a4a) format('woff2');
+}
+@font-face {
+  font-family: 'Jost';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./fonts/Jost-400.woff2?v=08d7e5e42a802a4a) format('woff2');
+}

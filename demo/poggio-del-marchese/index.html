@@ -1,0 +1,256 @@
+<!doctype html>
+<!-- Poggio del Marchese V9: l'esperienza inizia qui. -->
+<html lang="it" data-poggio-version="08d7e5e42a802a4a">
+<head>
+  <script>
+  if(location.protocol==='file:'&&!document.documentElement.hasAttribute('data-poggio-standalone')){
+    const localEntry=new URL('../APRI_IL_SITO.html',location.href);localEntry.hash=location.hash;
+    location.replace(localEntry.href);
+  }
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#171416">
+<!-- SEO:START -->
+  <title>Poggio del Marchese | Rosso Conero DOC nelle Marche</title>
+  <meta name="description" content="Scopri Poggio del Marchese, progetto di cantina legato al Rosso Conero DOC e alle Marche. Segui le novità sul vino e sulla prossima apertura.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Poggio del Marchese">
+  <meta property="og:title" content="Poggio del Marchese | Rosso Conero DOC nelle Marche">
+  <meta property="og:description" content="Scopri Poggio del Marchese, progetto di cantina legato al Rosso Conero DOC e alle Marche. Segui le novità sul vino e sulla prossima apertura.">
+  <meta property="og:image" content="./assets/poggio-del-marchese-social.jpg?v=08d7e5e42a802a4a">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Poggio del Marchese: anteprima della bottiglia Rosso Conero DOC e nome della cantina">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Poggio del Marchese | Rosso Conero DOC nelle Marche">
+  <meta name="twitter:description" content="Scopri Poggio del Marchese, progetto di cantina legato al Rosso Conero DOC e alle Marche. Segui le novità sul vino e sulla prossima apertura.">
+  <meta name="twitter:image" content="./assets/poggio-del-marchese-social.jpg?v=08d7e5e42a802a4a">
+  <meta name="twitter:image:alt" content="Poggio del Marchese: anteprima della bottiglia Rosso Conero DOC e nome della cantina">
+  <script type="application/ld+json" id="seo-structured-data">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "#organizzazione",
+      "name": "Poggio del Marchese",
+      "description": "Poggio del Marchese è un progetto di cantina di prossima apertura, con il Rosso Conero DOC al centro del suo percorso nelle Marche.",
+      "knowsAbout": [
+        "Rosso Conero DOC",
+        "Conero",
+        "Marche"
+      ]
+    }
+  ]
+}
+  </script>
+<!-- SEO:END -->
+  <link rel="icon" href="./assets/favicon.svg?v=08d7e5e42a802a4a" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon-96.png?v=08d7e5e42a802a4a" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png?v=08d7e5e42a802a4a" sizes="180x180">
+  <link rel="stylesheet" href="./assets/vendor/fonts.css?v=08d7e5e42a802a4a">
+  <link rel="stylesheet" href="./assets/site.css?v=08d7e5e42a802a4a">
+<script>
+(() => {
+  const root=document.documentElement;
+  window.POGGIO_OPENING={expired:false,minimum:1100,shownAt:null};
+  let introPaint=Promise.resolve(),introId=0;
+  window.beginPoggioOpening=()=>{
+    const id=++introId;root.classList.add('is-loading');
+    introPaint=new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      if(id===introId)window.POGGIO_OPENING.shownAt=performance.now();resolve();
+    })));
+  };
+  window.waitForPoggioIntro=async()=>{
+    await introPaint;
+    const opening=window.POGGIO_OPENING;
+    await new Promise(resolve=>setTimeout(resolve,Math.max(0,opening.minimum-(performance.now()-opening.shownAt))));
+  };
+  const planned=true;
+  window.showPoggioLoadingError=(message)=>{
+    clearTimeout(window.poggioDeadline);root.classList.add('is-loading');
+    const loader=document.getElementById('site-loader');
+    if(loader){loader.inert=false;loader.setAttribute('aria-hidden','false');}
+    const note=document.getElementById('loader-note'),retry=document.getElementById('retry-loading');
+    if(note)note.textContent=message||'Non è stato possibile preparare il 3D. Riprova oppure entra nella vista statica.';
+    if(retry)retry.hidden=false;
+    root.dataset.opening='loading-error';document.getElementById('loader-caption').textContent='Un piccolo imprevisto';
+  };
+  window.finishPoggioOpening=()=>{
+    clearTimeout(window.poggioDeadline);root.classList.remove('is-loading');
+    window.POGGIO_OPENING.revealedAt=performance.now();
+    const loader=document.getElementById('site-loader');
+    if(loader){if(loader.contains(document.activeElement))document.querySelector('.skip-link')?.focus({preventScroll:true});loader.inert=true;loader.setAttribute('aria-hidden','true');}
+  };
+  if(planned){root.classList.add('is-loading','scene-planned');window.poggioDeadline=setTimeout(()=>{
+    window.POGGIO_OPENING.expired=true;window.showPoggioLoadingError();dispatchEvent(new Event('poggio-timeout'));
+  },30000);}
+  document.addEventListener('DOMContentLoaded',()=>{
+    if(window.POGGIO_BOOTED)return;
+    document.getElementById('retry-loading').addEventListener('click',()=>location.reload());
+    document.getElementById('skip-loading').addEventListener('click',()=>{
+      root.classList.remove('has-scene','scene-planned','js');window.waitForPoggioIntro().then(window.finishPoggioOpening);
+    });
+  },{once:true});
+})();
+</script>
+  <script defer src="./assets/cache.js?v=08d7e5e42a802a4a"></script>
+  <script defer src="./assets/config.js?v=08d7e5e42a802a4a"></script>
+<script defer src="./assets/newsletter.js?v=08d7e5e42a802a4a"></script>
+<script defer src="./assets/site.js?v=08d7e5e42a802a4a"></script>
+</head>
+<body>
+  <div class="site-loader" id="site-loader" role="status" aria-live="polite">
+    <span class="loader-mark" aria-hidden="true">
+      <svg class="loader-barrique" viewBox="0 0 112 112" fill="none">
+        <defs>
+          <linearGradient id="barrique-wood" x1="24" y1="20" x2="86" y2="93" gradientUnits="userSpaceOnUse"><stop stop-color="#e1c596"/><stop offset=".5" stop-color="#ba925f"/><stop offset="1" stop-color="#8b613e"/></linearGradient>
+          <clipPath id="barrique-head"><circle cx="56" cy="56" r="36"/></clipPath>
+        </defs>
+        <circle cx="56" cy="56" r="44" fill="#302b29" stroke="#d4b584" stroke-width="1.5"/>
+        <circle cx="56" cy="56" r="39" fill="#9f774b" stroke="#d9b982" stroke-width="1.5"/>
+        <circle cx="56" cy="56" r="36" fill="url(#barrique-wood)" stroke="#6a482d"/>
+        <g clip-path="url(#barrique-head)" stroke="#705034" stroke-width="1.15">
+          <path d="M32 18V94M44 18V94M56 18V94M68 18V94M80 18V94"/>
+          <g stroke-opacity=".35" stroke-width=".7"><path d="M26 30Q31 45 27 71M37 25Q34 43 39 59T37 90M49 23Q53 36 49 47M61 64Q58 78 63 92M73 20Q77 40 73 55T75 85M85 42Q81 59 86 76"/></g>
+        </g>
+        <g fill="#d4b584"><circle cx="56" cy="14" r="1.2"/><circle cx="86" cy="26" r="1.2"/><circle cx="98" cy="56" r="1.2"/><circle cx="86" cy="86" r="1.2"/><circle cx="56" cy="98" r="1.2"/><circle cx="26" cy="86" r="1.2"/><circle cx="14" cy="56" r="1.2"/><circle cx="26" cy="26" r="1.2"/></g>
+        <circle cx="56" cy="56" r="12" fill="#b38a56" stroke="#785333" stroke-opacity=".7"/>
+        <path d="M49 62V50L56 58L63 50V62" stroke="#69472d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <p class="loader-title">Poggio del Marchese</p>
+    <p class="loader-caption" id="loader-caption">Ogni grande storia merita un’attesa.</p>
+    <p class="loader-note" id="loader-note">Preparazione della tua esperienza!</p>
+<button id="skip-loading" type="button">Entra subito senza animazione</button>
+<button id="retry-loading" type="button" hidden>Riprova il caricamento 3D</button>
+  </div>
+  <div id="site-content">
+  <a class="skip-link" href="#progetto">Vai ai contenuti</a>
+  <header class="site-header" id="site-header">
+    <div class="nav-inner">
+      <a class="wordmark" href="#inizio" aria-label="Poggio del Marchese, inizio">
+        <span class="monogram" aria-hidden="true">M</span>
+        <span>Poggio del Marchese</span>
+      </a>
+      <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="navigation">Menu</button>
+      <nav id="navigation" aria-label="Navigazione principale">
+        <a href="#progetto">Il progetto</a>
+        <a href="#vino">Il vino</a>
+        <a class="nav-cta" href="#apertura">Resta aggiornato</a>
+        <button id="scene-toggle" class="scene-toggle" type="button" hidden>Avvia animazione</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="film" id="inizio" aria-labelledby="hero-title">
+      <div class="stage" id="stage">
+        <div class="scene-background" id="scene-background" aria-hidden="true"></div>
+        <img class="bottle-fallback" id="bottle-fallback" src="./assets/bottiglia.webp?v=08d7e5e42a802a4a" alt="Anteprima della bottiglia Poggio del Marchese con etichetta Rosso Conero DOC" width="500" height="870" decoding="async">
+        <canvas id="wine-canvas" aria-hidden="true"></canvas>
+        <div class="hero-copy" id="hero-copy">
+          <p class="eyebrow">Cantina di prossima apertura</p>
+          <h1 id="hero-title">Poggio <em>del</em><br> Marchese</h1>
+          <p class="hero-subtitle">Una nuova storia<br class="desktop-break"> sta prendendo forma.</p>
+        </div>
+        <div class="hero-side" id="hero-side">
+          <span class="small-rule"></span>
+          <span class="eyebrow">Il nostro primo incontro</span>
+          <p>Rosso Conero <span>DOC</span></p>
+          <span class="hero-origin">Marche · Italia</span>
+        </div>
+        <aside class="scene-wine-data" id="scene-wine-data" aria-labelledby="scene-wine-title" aria-hidden="true" hidden>
+          <p class="eyebrow">Il vino protagonista</p>
+          <h2 id="scene-wine-title">Rosso Conero <span>DOC</span></h2>
+          <p class="scene-wine-description">Tra le colline del Conero e l’Adriatico, una denominazione legata al Montepulciano.</p>
+          <dl class="scene-wine-facts">
+            <div><dt>Territorio</dt><dd>Conero, Marche</dd></div>
+            <div><dt>Vitigno di riferimento della DOC</dt><dd>Montepulciano</dd></div>
+            <div><dt>Il nostro vino</dt><dd>In preparazione</dd></div>
+          </dl>
+          <p class="scene-wine-note">Annata, gradazione, uvaggio e affinamento del nostro vino sono ancora da definire.</p>
+        </aside>
+        <div class="scene-bottom" id="scene-bottom" aria-hidden="true">
+          <span class="scene-chapter" id="scene-chapter">01 — Un nuovo inizio</span>
+          <span class="scroll-invitation" id="scroll-invitation">Scorri per scoprirla</span>
+          <span class="film-progress"><span id="film-progress"></span></span>
+        </div>
+<div class="scene-veil" id="scene-veil" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section project-section" id="progetto" aria-labelledby="project-title">
+      <div class="container">
+        <div class="section-label"><span>01</span><span>Il progetto</span><i></i></div>
+        <div class="project-grid">
+          <h2 class="reveal" id="project-title">Le cose belle<br>hanno il loro<br><em>tempo.</em></h2>
+          <div class="project-copy reveal">
+            <p>Poggio del Marchese è una nuova realtà vinicola in preparazione. Questo è il nostro primo incontro: un nome, un progetto e una storia ancora da scrivere.</p>
+            <p>Il Rosso Conero DOC sarà il vino protagonista. Da qui comincia il nostro percorso, un passo alla volta.</p>
+            <div class="project-signature"><span class="monogram" aria-hidden="true">M</span><span>Poggio del Marchese<small>Cantina di prossima apertura</small></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wine-section" id="vino" aria-labelledby="wine-title">
+      <div class="container">
+        <div class="section-label"><span>02</span><span>Il vino</span><i></i></div>
+        <div class="wine-grid">
+          <div class="wine-copy reveal">
+            <p class="eyebrow">Poggio del Marchese</p>
+            <h2 id="wine-title">Il nostro<br>Rosso Conero <span class="doc">DOC</span></h2>
+            <p>Il Rosso Conero DOC racconta un territorio marchigiano tra colline e Adriatico. Il Montepulciano è il vitigno di riferimento della denominazione.</p>
+            <dl class="wine-facts">
+              <div><dt>Denominazione</dt><dd>Rosso Conero DOC</dd></div>
+              <div><dt>Territorio</dt><dd>Conero, Marche</dd></div>
+              <div><dt>Il nostro vino</dt><dd>In preparazione</dd></div>
+            </dl>
+            <p class="wine-note">Le informazioni sul territorio descrivono la denominazione. Annata, gradazione, uvaggio e affinamento del nostro vino saranno presentati quando definiti.</p>
+            <a class="text-link" href="https://imtdoc.it/vino/rosso-conero/" target="_blank" rel="noopener noreferrer">Conosci la denominazione · IMT</a>
+          </div>
+          <figure class="label-showcase reveal">
+            <span class="showcase-top">Il carattere prende forma</span>
+            <img id="label-preview" class="label-preview" src="./assets/etichetta.webp?v=08d7e5e42a802a4a" alt="Anteprima dell’etichetta Poggio del Marchese, Rosso Conero DOC" width="900" height="810" loading="lazy" decoding="async">
+            <img id="label-preview-fallback" class="label-preview-fallback" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAgNDIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkJvdHRpZ2xpYSBwcm92dmlzb3JpYSBkaSBSb3NzbyBDb25lcm8gRE9DIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ2wyIiB4MT0iMCIgeDI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzA1MGYwOSIvPjxzdG9wIG9mZnNldD0iLjE4IiBzdG9wLWNvbG9yPSIjMjk0OTMzIi8+PHN0b3Agb2Zmc2V0PSIuMjkiIHN0b3AtY29sb3I9IiMwYzI0MTYiLz48c3RvcCBvZmZzZXQ9Ii41OCIgc3RvcC1jb2xvcj0iIzBkMmExYiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA0MGIwNyIvPjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0iY2FwIiB4MT0iMCIgeDI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzM2MTAxYSIvPjxzdG9wIG9mZnNldD0iLjI4IiBzdG9wLWNvbG9yPSIjODczYzUxIi8+PHN0b3Agb2Zmc2V0PSIuNTUiIHN0b3AtY29sb3I9IiM1OTIwMzIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyZTBjMTciLz48L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhcGVyIiB4MT0iMCIgeDI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2Q5Y2ViYSIvPjxzdG9wIG9mZnNldD0iLjIiIHN0b3AtY29sb3I9IiNlZWU0ZDAiLz48c3RvcCBvZmZzZXQ9Ii43IiBzdG9wLWNvbG9yPSIjZWVlNGQwIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjY2ZjM2FiIi8+PC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cGF0aCBkPSJNNjggMTBoMjR2OTJjMCAzMCA0MiAzOCA0MiA4NHYyMThjMCA2LTQgMTAtMTAgMTBIMzZjLTYgMC0xMC00LTEwLTEwVjE4NmMwLTQ2IDQyLTU0IDQyLTg0eiIgZmlsbD0idXJsKCNnbDIpIi8+CjxwYXRoIGQ9Ik02OCAxMGgyNHEyIDAgMiAzdjYxSDY2VjEzcTAtMyAyLTN6IiBmaWxsPSJ1cmwoI2NhcCkiLz4KPHBhdGggZD0iTTY3IDcyaDI2IiBzdHJva2U9IiNiMzkzNWUiIHN0cm9rZS13aWR0aD0iMS41Ii8+CjxyZWN0IHg9IjMxIiB5PSIxOTYiIHdpZHRoPSI5OCIgaGVpZ2h0PSIxMTAiIGZpbGw9InVybCgjcGFwZXIpIi8+CjxyZWN0IHg9IjM1IiB5PSIyMDAiIHdpZHRoPSI5MCIgaGVpZ2h0PSIxMDIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2JjYTE3NSIgc3Ryb2tlLXdpZHRoPSIuNDUiLz4KPHBhdGggZD0iTTUwIDIyOHExNC0xNiAyOC0xNnQyMCAxNCAyMiAyIiBmaWxsPSJub25lIiBzdHJva2U9IiM1YTEyMjAiIHN0cm9rZS13aWR0aD0iMS42Ii8+CjxwYXRoIGQ9Ik02MCAyNzRoNDAiIHN0cm9rZT0iI2E5ODg1MCIvPgo8ZyBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzNhMGYxNyI+PHRleHQgeD0iODAiIHk9IjI1MCIgZm9udC1zaXplPSI5IiBsZXR0ZXItc3BhY2luZz0iLjgiPlBPR0dJTyBERUw8L3RleHQ+PHRleHQgeD0iODAiIHk9IjI2NiIgZm9udC1zaXplPSIxMSIgbGV0dGVyLXNwYWNpbmc9Ii44Ij5NQVJDSEVTRTwvdGV4dD48dGV4dCB4PSI4MCIgeT0iMjkxIiBmb250LXNpemU9IjUuMiIgbGV0dGVyLXNwYWNpbmc9Ii42IiBmaWxsPSIjNWExMjIwIj5ST1NTTyBDT05FUk8gRE9DPC90ZXh0PjwvZz4KPC9zdmc+Cg==" alt="Bottiglia provvisoria Rosso Conero DOC" width="160" height="420" hidden>
+            <figcaption>Rosso Conero DOC · Anteprima</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section opening-section" id="apertura" aria-labelledby="opening-title">
+      <div class="container">
+        <div class="section-label"><span>03</span><span>Resta aggiornato</span><i></i></div>
+        <div class="opening-grid">
+          <div class="reveal">
+            <p class="eyebrow">L’inizio si avvicina</p>
+            <h2 id="opening-title">Ci sono incontri<br>che meritano<br><em>un’attesa.</em></h2>
+            <p class="opening-description">Stiamo preparando il nostro debutto. Qui troverai le novità sul vino e sull’apertura di Poggio del Marchese.</p>
+          </div>
+          <form class="newsletter reveal" id="newsletter" aria-labelledby="newsletter-title">
+<h3 id="newsletter-title">Le novità saranno pubblicate qui.</h3>
+            <label for="email" id="email-label" hidden>La tua email</label>
+            <div class="form-fields" hidden>
+              <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="La tua email" maxlength="254" aria-describedby="form-status" required>
+              <button id="subscribe" type="submit" disabled>Avvisami all’apertura</button>
+            </div>
+            <label class="consent" id="consent-row" hidden>
+              <input id="consent" name="consent" type="checkbox">
+              <span>Desidero ricevere aggiornamenti sull’apertura e ho letto l’<a id="privacy-link" target="_blank" rel="noopener noreferrer">informativa privacy</a>.</span>
+            </label>
+            <p class="form-status" id="form-status" role="status" aria-live="polite">Le iscrizioni non sono ancora aperte. Torna su questa pagina per le novità sul vino e sulla cantina.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Poggio del Marchese · Prossima apertura</span><a href="#inizio">Torna all’inizio</a></div></footer>
+  </div>
+</body>
+</html>

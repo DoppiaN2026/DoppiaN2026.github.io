@@ -1,0 +1,17 @@
+FONTI E LICENZE
+
+Bottiglia sorgente: Poly Haven — Wine Bottles 01
+https://polyhaven.com/a/wine_bottles_01
+Asset Poly Haven: CC0. Informazioni: https://polyhaven.com/license
+La forma e i materiali sono stati personalizzati per Poggio del Marchese.
+Le etichette avorio/oro provengono dal precedente progetto personalizzato.
+
+Three.js r128 e GLTFLoader: MIT, copyright degli autori Three.js.
+La licenza completa è in assets/vendor/LICENSE-three.txt.
+
+Cormorant Garamond e Jost: SIL Open Font License 1.1.
+I testi completi sono in assets/vendor/fonts/OFL-*.txt.
+Le versioni WOFF2 incluse derivano dagli stessi font TTF, senza modifiche ai glifi.
+
+Immagine statica e anteprima social: viste del modello personalizzato incluso.
+Le icone usano il monogramma M già presente nel progetto.

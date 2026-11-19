@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# DEMO: le pagine sono noindex finché non si imposta il dominio di pubblicazione.
+# Il file sitemap.xml viene creato da scripts/prepare-deploy.mjs quando si configura il dominio.
